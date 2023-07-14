@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('price');
             $table->text('description');
-            $table->integer('view_count');
+            $table->integer('view_count')->default(0);
             $table->foreignId('category_id')->nullable();
             $table->foreignId('brand_id')->nullable();
             $table->foreignId('tag_id')->default(1);

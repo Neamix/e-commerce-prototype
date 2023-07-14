@@ -26,7 +26,10 @@ class ProductUpsertRequest extends FormRequest
         return [
             'title' => ['required'],
             'description' => ['required'],
-            'price' => ['required']
+            'price' => ['required','numeric'],
+            'category_id' => ['exists:categories,id'],
+            'brand_id' => ['exists:brands,id'],
+            'view_count' => ['integer']
         ];
     }
 }

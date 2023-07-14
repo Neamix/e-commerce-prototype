@@ -49,7 +49,7 @@ class Product extends Model
         }
 
         if ( isset($request['just_arrived'] ) ) {
-            $query->orderBy('created_at');
+            $query->orderBy('created_at','DESC');
         }
 
         if (  isset($request['special_offer']) ) {
